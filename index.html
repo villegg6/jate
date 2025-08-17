@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jätteeks Jääny – Romut pois helposti Oulussa</title>
+  <meta name="description" content="Jätteeks Jääny noutaa ylimääräisen romun ja jätteet helposti Oulussa ja lähikunnissa. Ei kiinteää hintaa – tulemme paikan päälle ja sovimme hinnan. Liity salaiselle listalle ja saat torstain diilit ja -10% ensimmäisestä noudosta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fi_FI" />
+  <meta property="og:title" content="Jätteeks Jääny – Romut pois helposti Oulussa" />
+  <meta property="og:description" content="Paikallinen, ekologinen noutopalvelu. Oulu + lähikunnat. -10% ensimmäisestä noudosta kun liityt listalle." />
+  <meta property="og:image" content="/images/og-cover.jpg" />
+  <meta property="og:url" content="https://jatteeksjaany.netlify.app/" />
+  <link rel="canonical" href="https://jatteeksjaany.netlify.app/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--green-dark:#2E4D34;--green-light:#81C784;--ink:#1E1E1E;--paper:#F4F1ED;--muted:#6b7280;--ring:rgba(129,199,132,0.5);--radius:14px;--shadow:0 10px 30px rgba(0,0,0,.08);--whatsapp:#25D366;--call:#1E1E1E;}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);margin:0;line-height:1.55}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .container{max-width:1100px;margin-inline:auto;padding:0 20px}
+    .grid{display:grid;gap:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border:none;border-radius:12px;font-weight:700;cursor:pointer;text-decoration:none}
+    .btn-cta{background:var(--green-light);color:#fff;box-shadow:var(--shadow)}
+    .btn-cta:hover{filter:brightness(.95)}
+    .btn-outline{background:#fff;color:var(--green-dark);border:2px solid var(--green-dark)}
+    .btn-call{background:var(--call);color:#fff;}
+    .btn-call:hover{filter:brightness(1.2)}
+    .btn-wa{background:var(--whatsapp);color:#fff;}
+    .btn-wa:hover{filter:brightness(1.1)}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:.4rem .8rem;font-size:.9rem}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .muted{color:var(--muted)}
+    header.site-header{position:sticky;top:0;z-index:50;background:rgba(244,241,237,.8);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid #eaeaea}
+    .site-header .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;align-items:center;gap:.8rem;font-weight:800}
+    .brand .logo{width:40px;height:40px;border-radius:10px;background:var(--green-dark);display:grid;place-items:center;color:#fff;font-weight:800}
+    .brand-name{font-family:Fredoka,Inter,sans-serif;font-weight:700;font-size:1.05rem}
+    .hero{position:relative;background:linear-gradient(180deg, rgba(46,77,52,0.85), rgba(46,77,52,0.65)), url('/images/hero.png') center/cover no-repeat; color:#fff}
+    .hero-inner{padding:64px 0}
+    .hero h1{font-family:Fredoka,Inter,sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.1;margin:0 0 12px}
+    .hero p{font-size:1.05rem;margin:0 0 22px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    section{padding:56px 0}
+    section .title{font-family:Fredoka,Inter,sans-serif;font-weight:700;font-size:clamp(1.4rem,3.2vw,2rem);margin:0 0 18px}
+    section .lead{font-size:1.05rem;margin:0 0 24px}
+    .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .step{position:relative}
+    .step .num{position:absolute;top:-12px;left:-12px;background:var(--green-light);color:#fff;font-weight:800;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;box-shadow:var(--shadow)}
+    .step h3{margin:.2rem 0 .4rem;font-size:1.1rem}
+    .features{grid-template-columns:repeat(3,minmax(0,1fr))}
+    form{display:grid;gap:10px}
+    input, textarea, select{appearance:none;padding:12px 14px;border:1px solid #d1d5db;border-radius:12px;font:inherit}
+    input:focus, textarea:focus{outline:none;box-shadow:0 0 0 4px var(--ring);border-color:var(--green-light)}
+    label{font-weight:600}
+    .consent{font-size:.9rem}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .review-cta{display:flex;flex-direction:column;gap:10px}
+    footer{background:var(--green-dark);color:#fff}
+    footer a{color:#fff;text-decoration:underline}
+    .sticky-cta{position:fixed;bottom:14px;left:14px;right:14px;z-index:60;display:flex;gap:10px;justify-content:center}
+    .sticky-cta .btn{flex:1}
+    @media (max-width:900px){.steps,.features{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.hero-inner{padding:40px 0}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Jätteeks Jääny","description":"Paikallinen romun ja jätteiden nouto Oulussa ja lähikunnissa. Ei kiinteää hintaa – arvio paikan päällä, hinta sisältää kierrätyskulut.","email":"mailto:ville.niinimaaa@gmail.com","telephone":"+358442309006","areaServed":["Oulu","Kempele","Liminka","Haukipudas","Kiiminki"],"url":"https://jatteeksjaany.netlify.app/","sameAs":["https://g.page/r/CdYVARXb9dxsEBI/review"],"priceRange":"€€"}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="nav container" aria-label="Päänavigaatio">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true">JJ</span>
+        <span class="brand-name">Jätteeks Jääny</span>
+      </a>
+      <nav>
+        <a class="btn btn-outline" href="#contact">Tilaa nouto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="chip">♻️ Paikallinen & ekologinen</div>
+      <h1 id="hero-title">Kun jää ylimääräistä – me haetaan!</h1>
+      <p class="lead">Romut, huonekalut ja jätteet pois helposti <strong>Oulussa ja lähikunnissa</strong>. Ei kiinteää hintaa – tulemme paikan päälle, arvioimme ja sovimme hinnan. Nopeat noudot.</p>
+      <div class="hero-actions">
+        <a class="btn btn-cta" href="#contact">Tilaa nouto →</a>
+        <a class="btn btn-outline" href="#signup">Liity salaiselle listalle</a>
+        <a class="btn btn-call" href="tel:+358442309006">📞 Soita 044 230 9006</a>
+        <a class="btn btn-wa" href="https://wa.me/358442309006" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+      <div class="badges">
+        <span class="chip">📍 Oulu + lähikunnat (ei lisämaksua)</span>
+        <span class="chip">💨 Nopeat ajat</span>
+        <span class="chip">🧾 Hinta sisältää kierrätyskulut</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" aria-labelledby="how-title">
+    <h2 id="how-title" class="title">Näin homma toimii</h2>
+    <p class="lead">Yksinkertainen kuin jätesäkki.</p>
+    <div class="grid steps">
+      <div class="card step">
+        <div class="num">1</div>
+        <h3>Ota yhteyttä</h3>
+        <p>Lähetä lomake, meilaa tai viestitä WhatsAppissa. Kerro lyhyesti mitä pitäisi noutaa ja mistä.</p>
+      </div>
+      <div class="card step">
+        <div class="num">2</div>
+        <h3>Arvio paikan päällä</h3>
+        <p>Tulemme paikalle, katsotaan homma yhdessä ja sovitaan <strong>reilu hinta</strong> (ei piilokuluja).</p>
+      </div>
+      <div class="card step">
+        <div class="num">3</div>
+        <h3>Nouto & kierrätys</h3>
+        <p>Noudamme tavarat, lajittelemme ja huolehdimme kierrätyksestä asianmukaisesti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" aria-labelledby="services-title">
+    <h2 id="services-title" class="title">Noudamme melkein kaiken</h2>
+    <p class="lead">Huonekalut • Elektroniikka • Puujäte • Metalli • Sekajäte • Remonttijäte</p>
+    <div class="grid features">
+      <div class="card">
+        <h3>Paikallinen & ekologinen</h3>
+        <p>Toimimme Oulussa ja lähikunnissa, lajitellen ja kierrättäen materiaalit vastuullisesti.</p>
+      </div>
+      <div class="card">
+        <h3>Ei kiinteää hintaa</h3>
+        <p>Jokainen keikka on erilainen. Arvioimme paikan päällä ja hinta <strong>sisältää kierrätyskulut</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Nopeat noudot</h3>
+        <p>Ei varsinaista päivystystä, mutta järjestämme usein noudon nopeasti – joskus jo samalle tai seuraavalle päivälle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="container" aria-labelledby="signup-title">
+    <h2 id="signup-title" class="title">Liity salaiselle listalle</h2>
+    <p class="lead">Torstain diilit, parhaat kierrätysvinkit ja <strong>-10% ensimmäisestä noudosta</strong>.</p>
+    <form id="signupForm" action="https://script.google.com/macros/s/AKfycbyoUxbfDoG9DUQn5or8M73c__8eZujXSqxtXYYFsZnpHo-UyfxM6NI746yN34sJOh8P/exec" method="POST" aria-describedby="signup-hint">
+      <div class="form-row">
+        <div><label for="first">Etunimi</label><input id="first" name="firstname" type="text" placeholder="Maija" required /></div>
+        <div><label for="last">Sukunimi</label><input id="last" name="lastname" type="text" placeholder="Meikäläinen" required /></div>
+      </div>
+      <div><label for="email">Sähköposti</label><input id="email" name="email" type="email" placeholder="maija@example.com" required /></div>
+      <label class="consent"><input type="checkbox" name="consent" required /> Hyväksyn markkinointiviestit ja tietosuojakäytännön.</label>
+      <button class="btn btn-cta" type="submit">Liity listalle →</button>
+      <p id="signup-hint" class="muted">Voit perua milloin vain yhdellä klikkauksella.</p>
+      <p id="signupResult" role="status" class="muted" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="contact" class="container" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="title">Ota yhteyttä & tilaa nouto</h2>
+    <p class="lead">Kerro lyhyesti mitä noudetaan, mistä ja milloin toivot noudon. Vastaamme pikaisesti.</p>
+    <div class="grid" style="grid-template-columns:1.2fr .8fr;gap:24px">
+      <div class="card">
+        <form action="mailto:ville.niinimaaa@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div><label for="cfirst">Etunimi</label><input id="cfirst" name="firstname" type="text" required /></div>
+            <div><label for="clast">Sukunimi</label><input id="clast" name="lastname" type="text" required /></div>
+          </div>
+          <div class="form-row">
+            <div><label for="cemail">Sähköposti</label><input id="cemail" name="email" type="email" required /></div>
+            <div><label for="clocation">Sijainti</label><input id="clocation" name="location" type="text" placeholder="Oulu / Kempele / …" /></div>
+          </div>
+          <div><label for="cmessage">Mitä pitäisi noutaa?</label><textarea id="cmessage" name="message" rows="5" placeholder="Esim. sohva ja kaksi jätesäkkiä, 3. kerros, hissi on."></textarea></div>
+          <button class="btn btn-cta" type="submit">Lähetä yhteydenotto</button>
+          <p class="muted" style="margin-top:.5rem">Ei päivystystä, mutta usein onnistuu nopeasti.</p>
+        </form>
+      </div>
+      <aside class="card" aria-label="Yhteystiedot">
+        <h3 style="margin-top:0">Yhteystiedot</h3>
+        <p class="muted">Voit myös olla yhteydessä suoraan.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
+          <li>📞 <a href="tel:+358442309006">Soita 044 230 9006</a></li>
+          <li>💬 <a href="https://wa.me/358442309006" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>✉️ <a href="mailto:ville.niinimaaa@gmail.com">ville.niinimaaa@gmail.com</a></li>
+          <li>📍 Oulu + lähikunnat (ei lisämaksua)</li>
+        </ul>
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eee" />
+        <div class="review-cta">
+          <strong>Asiakaspalautteet</strong>
+          <a class="btn btn-outline" href="https://g.page/r/CdYVARXb9dxsEBI/review" target="_blank" rel="noopener">Jätä arvostelu Googleen →</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="privacy" class="container" aria-labelledby="privacy-title">
+    <h2 id="privacy-title" class="title">Tietosuoja tiiviisti</h2>
+    <p class="lead">Keräämme uutiskirjeen tilauksessa nimen ja sähköpostin. Tietoja käytetään vain Jätteeks Jääny -viestintään. Voit perua milloin tahansa.</p>
+    <div class="card">
+      <p>Rekisterinpitäjä: Jätteeks Jääny, Oulu. Yhteys: <a href="mailto:ville.niinimaaa@gmail.com">ville.niinimaaa@gmail.com</a>.</p>
+      <p>Tietoja ei luovuteta ulkopuolisille tahoille paitsi lakisääteisesti. Tietoja säilytetään EU/ETA-alueella käyttämissämme palveluissa. Sinulla on oikeus tarkastaa, oikaista ja poistaa tietosi.</p>
+      <p><em>Laajempi tietosuojaseloste</em> saatavilla pyynnöstä tai erillisenä PDF:nä.</p>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container" style="padding:28px 0; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px">
+      <p style="margin:0">© <span id="year"></span> Jätteeks Jääny – Oulu</p>
+      <nav aria-label="Alapalkin linkit" style="display:flex; gap:16px; flex-wrap:wrap">
+        <a href="#signup">Liity listalle</a>
+        <a href="#privacy">Tietosuoja</a>
+        <a href="#contact">Yhteys</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a class="btn btn-cta" href="#contact">Tilaa nouto</a>
+    <a class="btn btn-outline" href="#signup">Liity listalle</a>
+    <a class="btn btn-call" href="tel:+358442309006">📞 Soita</a>
+    <a class="btn btn-wa" href="https://wa.me/358442309006" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){ const form=document.getElementById('signupForm'); const result=document.getElementById('signupResult'); if(!form)return; form.addEventListener('submit', async function(e){ e.preventDefault(); const endpoint=form.action; const data=new FormData(form); try{ const res=await fetch(endpoint,{method:'POST',body:data,mode:'cors'}); if(res.ok){ result.textContent='Kiitos! Vahvistus on lähetetty. Tervetuloa salaiselle listalle.'; form.reset(); } else { result.textContent='Hups! Lähetys epäonnistui. Kokeile hetken päästä uudelleen.'; } }catch(err){ result.textContent='Verkkovirhe – yritä uudelleen tai ota yhteyttä sähköpostilla.'; } }); })();
+  </script>
+</body>
+</html>
